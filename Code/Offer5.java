@@ -2,7 +2,7 @@ package com.todd;
 
 /**
  * 请实现一个函数，把字符串 s 中的每个空格替换成"%20"。
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/15
  */
 public class Offer5 {

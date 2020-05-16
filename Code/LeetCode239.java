@@ -6,7 +6,7 @@ import java.util.LinkedList;
  * ************
  * 给定一个数组 nums，有一个大小为k的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的k个数字。滑动窗口每次只向右移动一位。
  * 返回滑动窗口中的最大值。
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/15
  */
 public class LeetCode239 {

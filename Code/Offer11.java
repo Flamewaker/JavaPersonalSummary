@@ -12,7 +12,7 @@ package com.todd;
  * 当 numbers[mid] == numbers[right]时：无法判断，但肯定不是right， 此时将right--；
  * 当left == right 循环退出。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/15
  */
 public class Offer11 {

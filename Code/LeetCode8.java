@@ -4,7 +4,7 @@ package com.todd;
  * 写一个函数 StrToInt，实现把字符串转换成整数这个功能。不能使用 atoi 或者其他类似的库函数。
  * 字符串转换
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/4
  */
 public class LeetCode8 {

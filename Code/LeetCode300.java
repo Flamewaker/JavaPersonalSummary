@@ -3,7 +3,7 @@ package com.todd;
 /**
  * 最长上升子序列
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/4
  */
 public class LeetCode300 {

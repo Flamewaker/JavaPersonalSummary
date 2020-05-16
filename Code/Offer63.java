@@ -11,7 +11,7 @@ import java.util.Queue;
  * 优化： profit=max(profit,prices[i]−min(cost,prices[i])。而在遍历 prices 时，可以借助一个变量（记为成本cost）每日更新最低价格。
  * 变量min保存数组前 i-1 个数字的最小值。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/14
  */
 public class Offer63 {

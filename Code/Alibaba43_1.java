@@ -3,7 +3,7 @@ package com.todd;
 import java.util.Scanner;
 
 /**
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/13
  */
 public class Alibaba43_1 {

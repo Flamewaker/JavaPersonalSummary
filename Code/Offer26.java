@@ -15,7 +15,7 @@ import javax.swing.tree.TreeNode;
  * 3. A.val != B.val false;
  * 4. 先序遍历的左右俩边都要满足一致
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/17
  */
 public class Offer26 {

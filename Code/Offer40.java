@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 输入整数数组 arr ，找出其中最小的 k个数。例如，输入4、5、1、6、2、7、3、8这8个数字，则最小的4个数字是1、2、3、4。
  * 思路：快排算法
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/15
  */
 public class Offer40 {

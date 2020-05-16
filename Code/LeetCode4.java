@@ -23,7 +23,7 @@ package com.todd;
  * 如果第一个数组的第K/2个数字小的话，那么说明我们要找的数字肯定不在nums1中的前K/2个数字，所以我们可以将其淘汰，将nums1的起始位置向后移动K/2个，
  * 并且此时的K也自减去K/2，调用递归。反之，我们淘汰nums2中的前K/2个数字，并将nums2的起始位置向后移动K/2个，并且此时的K也自减去K/2，调用递归即可。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/15
  */
 public class LeetCode4 {

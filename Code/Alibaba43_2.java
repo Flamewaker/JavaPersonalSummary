@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * 单调栈 + 对象排序
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/13
  */
 public class Alibaba43_2 {

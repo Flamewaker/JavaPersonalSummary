@@ -2,7 +2,7 @@ package com.todd;
 
 /**
  * 写一个函数，输入 n ，求斐波那契（Fibonacci）数列的第 n 项。
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/15
  */
 public class Offer10_1 {

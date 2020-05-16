@@ -3,7 +3,7 @@ package com.todd;
 /**
  * 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。
  * 思路 ： 可以只利用一个长度为 26 的字符数组，将出现在字符串 s 里的字符个数加 1，而出现在字符串 t 里的字符个数减 1，最后判断每个小写字母的个数是否都为 0。
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/15
  */
 public class LeetCode242 {

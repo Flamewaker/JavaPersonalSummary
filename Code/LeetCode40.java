@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 快速选择模板
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/4
  */
 public class LeetCode40 {

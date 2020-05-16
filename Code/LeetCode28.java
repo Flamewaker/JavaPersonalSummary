@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 实现 strStr() 函数。kmp算法模板 O(m+n)。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/14
  */
 public class LeetCode28 {

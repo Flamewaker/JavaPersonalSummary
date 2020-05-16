@@ -7,7 +7,7 @@ import java.util.LinkedList;
  * 给定一个数组 nums 和滑动窗口的大小 k，请找出所有滑动窗口里的最大值。
  * i - k 代表之前的坐标，n - k + 1为个数。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/14
  */
 public class Offer59_1 {

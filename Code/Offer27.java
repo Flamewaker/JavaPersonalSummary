@@ -9,7 +9,7 @@ import java.util.Queue;
  * 注意: root == null 是判断是否继续向下搜索的条件
  * root.left == null && root.right == null 直接跳出搜索过程
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/17
  */
 public class Offer27 {

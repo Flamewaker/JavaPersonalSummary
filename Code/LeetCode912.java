@@ -3,7 +3,7 @@ package com.todd;
 /**
  * 各种排序的实现
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/4
  */
 public class LeetCode912 {

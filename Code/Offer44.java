@@ -5,7 +5,7 @@ package com.todd;
  * 请写一个函数，求任意第n位对应的数字。
  * 找规律 9， 90 * 2， 900 * 3 。。。。。需要知道的是(res - 1) / count对应第几个数（从0开始）。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/23
  */
 public class Offer44 {

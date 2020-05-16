@@ -11,7 +11,7 @@ import java.util.List;
  * 如果sum > target, 左指针需要往右移动，不存在以该点为左节点和为target的值。
  * 如果sum == target, 将答案放到数组中。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/14
  */
 public class Offer57_2 {

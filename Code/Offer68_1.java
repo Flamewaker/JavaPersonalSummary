@@ -12,7 +12,7 @@ import java.util.LinkedList;
  * 当 p, q都在root的右子树中，则遍历至 root.right；否则，当 p, q都在 root的左子树中，则遍历至root.left；
  * 否则，说明找到了最近公共祖先，跳出。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/15
  */
 public class Offer68_1 {

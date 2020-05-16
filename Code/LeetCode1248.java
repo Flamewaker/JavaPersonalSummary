@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * 滑动窗口，加入俩个哨兵分别坐标是-1， nums.length
  * 注意边界 i = 1 和 i + k - 1 < len - 1
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/21
  */
 public class LeetCode1248 {

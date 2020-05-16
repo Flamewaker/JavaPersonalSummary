@@ -3,7 +3,7 @@ package com.todd;
 /**
  * 合并有序链表
  *
- * @auther todd
+ * @author todd
  * @Date 2020/4/15
  */
 public class LeetCode21 {

@@ -9,7 +9,7 @@ package com.todd;
  * 在n-1个骰子的基础上，再增加一个骰子出现点数和为s的结果只有这6种情况！那么有：f(n,s)=f(n-1,s-1)+f(n-1,s-2)+f(n-1,s-3)+f(n-1,s-4)+f(n-1,s-5)+f(n-1,s-6)
  * f(n,s)=f(n-1,s-1)+f(n-1,s-2)+f(n-1,s-3)+f(n-1,s-4)+f(n-1,s-5)+f(n-1,s-6)
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/14
  */
 public class Offer60 {

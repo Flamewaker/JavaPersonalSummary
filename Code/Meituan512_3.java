@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * 通过17%
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/12
  */
 public class Meituan512_3 {

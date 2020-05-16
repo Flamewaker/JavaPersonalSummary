@@ -12,7 +12,7 @@ import java.util.Stack;
  * pre:用来记录当前节点的上一个节点（最关键的就是这个pre了）
  * head：用来记录二叉树最左下角的最小值，也就是链表的头部
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/22
  */
 public class Offer36 {

@@ -10,7 +10,7 @@ package com.todd;
  * 时间复杂度：O(N) N为节点数，每个节点都需要递归操作且为O(1)
  * 空间复杂度：O(N) 节点数N递归所需空间
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/14
  */
 public class Offer55_2 {

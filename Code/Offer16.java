@@ -5,7 +5,7 @@ package com.todd;
  * 求base的exponent次方。快速幂模板。注意条件。x = 0, n <= 0。
  * 将exponent化为二进制数
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/15
  */
 public class Offer16 {

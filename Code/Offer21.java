@@ -5,7 +5,7 @@ package com.todd;
  * 双指针遍历，类似快排。
  * 所有偶数位于数组的后半部分。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/16
  */
 public class Offer21 {

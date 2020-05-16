@@ -5,7 +5,7 @@ package com.todd;
  * 在范围0～n-1内的n个数字中有且只有一个数字不在该数组中，请找出这个数字。
  * 思路： 排序数组中的搜索问题，首先想到 二分法 解决. 找到第一个不对应数字的下标。注意如果最后没有找到直接返回left即可。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/14
  */
 public class Offer53_2 {

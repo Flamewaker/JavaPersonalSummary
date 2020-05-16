@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * 两数之和
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/13
  */
 public class LeetCode1 {

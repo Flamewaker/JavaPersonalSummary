@@ -5,7 +5,7 @@ package com.todd;
  * 思路：看到排序数组，可以想到双指针法。双指针left, right分别指向数组 nums的左右两端 （俗称对撞双指针）。
  * 计算数值的和，判断指针移动的方向。时间复杂度是O(n), 空间复杂度为O(1);
  * 使用HashMap可以遍历找到需要找到的数字组合，时间复杂度和空间复杂度均为O(n);
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/14
  */
 public class Offer57_1 {

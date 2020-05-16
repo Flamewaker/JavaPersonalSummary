@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/16
  */
 public class LeetCode56 {

@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/15
  */
 public class LeetCode20 {

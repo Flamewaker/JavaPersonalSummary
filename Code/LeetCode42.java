@@ -9,7 +9,7 @@ import java.util.Scanner;
 /**
  * 单调栈
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/4
  */
 public class LeetCode42 {

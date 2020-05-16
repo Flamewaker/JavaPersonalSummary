@@ -3,7 +3,7 @@ package com.todd;
 /**
  * 正则表达式匹配，递归方法，可以使用dp方法
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/15
  */
 public class Offer19 {

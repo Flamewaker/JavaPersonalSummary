@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 回溯模板
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/13
  */
 public class LeetCode39 {

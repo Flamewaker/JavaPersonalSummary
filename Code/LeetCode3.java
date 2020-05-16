@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * 滑动窗口
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/13
  */
 public class LeetCode3 {

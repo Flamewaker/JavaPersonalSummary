@@ -8,7 +8,7 @@ import java.util.Map;
  * 使用辅助空间，将信息放在hash表中。首先创建相关节点，其次将相关指针进行指向。
  * 需要保留链表信息的问题可以考虑hash表保留指针信息。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/22
  */
 public class LeetCode35 {

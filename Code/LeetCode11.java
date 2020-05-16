@@ -10,7 +10,7 @@ package com.todd;
  * 若向内移动长板，水槽的短板 min(h[i], h[j]) 不变或变小，下个水槽的面积一定小于当前水槽面积。
  * 因此，向内收窄短板可以获取面积最大值。因此，不需要枚举所有的状态，使用双指针剔除不需要的状态即可。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/18
  */
 public class LeetCode11 {

@@ -9,7 +9,7 @@ import java.util.LinkedList;
  * 例如，序列 {1,2,3,4,5} 是某栈的压栈序列，序列 {4,5,3,2,1} 是该压栈序列对应的一个弹出序列，但 {4,3,5,1,2} 就不可能是该压栈序列的弹出序列。
  * 模拟题
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/18
  */
 public class Offer31 {

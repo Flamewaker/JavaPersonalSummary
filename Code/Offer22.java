@@ -9,7 +9,7 @@ import java.util.LinkedList;
  * 它们的值依次是1、2、3、4、5、6。这个链表的倒数第3个节点是值为4的节点。
  * 最开始的方法是使用的栈，后来采用快慢指针
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/16
  */
 

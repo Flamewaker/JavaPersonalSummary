@@ -6,7 +6,7 @@ package com.todd;
  * 进位：与运算 + 左移一位 c = (a & b) << 1
  * sum = a + b => n + c ，由于不能使用加法，因此再进行与操作，将进位加到前面的数中。循环 n 和 c 直到 c = 0, 返回sum
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/14
  */
 public class Offer65 {

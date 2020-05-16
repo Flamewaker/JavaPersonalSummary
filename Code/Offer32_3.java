@@ -10,7 +10,7 @@ import java.util.List;
  * 第三行再按照从左到右的顺序打印，其他行以此类推。
  * 双端队列 + BFS
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/18
  */
 public class Offer32_3 {

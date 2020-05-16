@@ -18,7 +18,7 @@ import java.util.List;
  * 从main函数的验证程序可以看出，在数据量不大的情况下，Add所占的时间不多，（不须像ArrayList那样去重新申请数组空间），
  * 但是在Copy过程中LinkedList所消耗的时间明显比ArrayList长。所以在需要对路径进行保存的题目中使用ArrayList。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/22
  */
 public class Offer34 {

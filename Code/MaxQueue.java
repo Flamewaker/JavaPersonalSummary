@@ -9,7 +9,7 @@ import java.util.Queue;
  * 若队列为空，pop_front 和 max_value 需要返回 -1。
  * 维护一个单调的双端队列，元素的值从小到大， 使用一个双端队列 deque，在每次入队时，如果 deque 队尾元素小于即将入队的元素 value，则将小于 value的元素全部出队后，再将 value入队；否则直接入队。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/14
  */
 public class MaxQueue {

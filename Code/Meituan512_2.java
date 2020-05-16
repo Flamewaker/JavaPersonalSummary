@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * 给n个数，问这n个数中具有的最大汉明距离是多少。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/12
  */
 public class Meituan512_2 {

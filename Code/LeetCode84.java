@@ -7,7 +7,7 @@ import java.util.*;
 /**
  * 单调栈 + 哨兵
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/4
  */
 public class LeetCode84 {

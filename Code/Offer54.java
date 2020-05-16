@@ -19,7 +19,7 @@ import java.util.Stack;
  * 1、直接return，如寻找最近公共祖先节点，具有排他性
  * 2、收集递归结果处理，如找到二叉树深度，max(left, right)+1
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/14
  */
 public class Offer54 {

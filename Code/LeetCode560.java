@@ -11,7 +11,7 @@ import java.util.HashMap;
  * 即pre[i - 1] = pre[j] - k
  * 注意：HashMap优化的时候，初始化将0添加进去。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/15
  */
 public class LeetCode560 {

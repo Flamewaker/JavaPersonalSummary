@@ -5,7 +5,7 @@ package com.todd;
  * 比如输入 3，则打印出 1、2、3 一直到最大的 3 位数 999。
  * 应该用大数模板
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/15
  */
 public class Offer17 {

@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * 有n个小朋友，每个小朋友m个成绩。对具有最好成绩的小朋友发奖状，每人最多一个奖状。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/12
  */
 public class Meituan512_1 {

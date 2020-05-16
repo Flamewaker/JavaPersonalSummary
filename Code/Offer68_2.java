@@ -12,8 +12,7 @@ import java.util.List;
  * 如果当前节点有一个子树的返回值为p或q节点，则返回该值。（告诉父节点有一个节点存在其子树中）
  * 如果当前节点的两个子树返回值都为空，则返回空指针。
  *
- *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/15
  */
 public class Offer68_2 {

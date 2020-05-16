@@ -7,7 +7,7 @@ import java.util.Queue;
  * 请实现一个函数，用来判断一棵二叉树是不是对称的。如果一棵二叉树和它的镜像一样，那么它是对称的。
  * 先序遍历 + 对称先序遍历二叉树
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/17
  */
 public class Offer28 {

@@ -13,7 +13,7 @@ import com.sun.org.apache.bcel.internal.generic.RETURN;
  * 3. e e符号只能出现一次，并且e之前必须有数字. e之后只能有带符号整数。
  *
  * @author think
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/16
  */
 public class Offer20 {

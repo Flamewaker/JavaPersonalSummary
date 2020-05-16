@@ -7,7 +7,7 @@ import java.util.LinkedList;
  * Offer30
  * 定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数在该栈中，调用 min、push 及 pop 的时间复杂度都是 O(1)。
  * 辅助栈 辅助栈和数据栈同步或不同步
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/18
  */
 public class MinStack {

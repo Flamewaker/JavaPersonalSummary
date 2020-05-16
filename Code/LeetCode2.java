@@ -5,7 +5,7 @@ package com.todd;
  * 如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。
  * 您可以假设除了数字 0 之外，这两个数都不会以 0 开头。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/15
  */
 public class LeetCode2 {

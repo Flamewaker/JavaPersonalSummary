@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 
 /**
- * @Auther todd
+ * @Author todd
  * @Date 2020/4/13
  */
 public class Alibaba413_1 {

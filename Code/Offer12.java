@@ -7,7 +7,7 @@ package com.todd;
  * 例如，在下面的3×4的矩阵中包含一条字符串“bfce”的路径（路径中的字母用加粗标出）。
  * 思路：DFS
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/15
  */
 public class Offer12 {

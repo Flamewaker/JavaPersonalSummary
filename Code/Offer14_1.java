@@ -10,7 +10,7 @@ package com.todd;
  * dp[i]=max(dp[i],dp[i-j]*j,(i-j)*j)
  *
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/15
  */
 public class Offer14_1 {

@@ -9,7 +9,7 @@ import java.util.Map;
  * 1. 遍历字符串 s ，使用哈希表统计 “各字符数量是否 > 1>1 ”。
  * 2. 再遍历字符串 s ，在哈希表中找到首个 “数量为 1的字符”，并返回。
  *
- * @Auther todd
+ * @Author todd
  * @Date 2020/5/12
  */
 public class Offer50 {
