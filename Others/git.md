@@ -159,5 +159,245 @@ git resotre  file
 ```
 
 ## 9. 添加远程仓库
+首先, 在github中创建仓库。
+第二步，在本地的learngit仓库下运行命令，
+```
+git remote add origin git@github.com:Flamewaker/DailySummary.git
+git remote add origin https://github.com:Flamewaker/DailySummary.git
+```
+添加后，远程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库。
+下一步，就可以把本地库的所有内容推送到远程库上：
+```
+git push -u origin master
+```
+
+把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。
+
+由于远程库是空的，我们第一次推送master分支时，加上了**-u**参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+
+从现在起，只要本地作了提交，就可以通过命令：
+```
+$ git push origin master
+```
+当你第一次使用Git的clone或者push命令连接GitHub时，会得到一个警告,这是因为Git使用SSH连接，而SSH连接在第一次验证GitHub服务器的Key时，需要你确认GitHub的Key的指纹信息是否真的来自GitHub的服务器，输入yes回车即可。
+
+GitHub配置SSH Key的目的是为了帮助我们在通过git提交代码时，不需要繁琐的验证过程，简化操作流程。[如何配置SSH Key](https://blog.csdn.net/u013778905/article/details/83501204)（git@github.com:Flamewaker/DailySummary.git）
+
+## 10. 从远程库克隆
+使用如下的命令：
+```
+git clone git@github.com:Flamewaker/DailySummary.git（ssh协议最快）
+git clone https://github.com:Flamewaker/DailySummary.git (https协议)
+```
+
+## 11. 分支管理
+分支在实际中有什么用呢？假设你准备开发一个新功能，但是需要两周才能完成，第一周你写了50%的代码，如果立刻提交，由于代码还没写完，不完整的代码库会导致别人不能干活了。如果等代码全部写完再一次提交，又存在丢失每天进度的巨大风险。
+
+你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，想提交就提交，直到开发完毕后，再一次性合并到原来的分支上，这样，既安全，又不影响别人工作。
 
 
+## 12. 创建和合并分支
+首先，我们创建dev分支，然后切换到dev分支：
+```
+$ git checkout -b dev
+$ git branch 查看分支
+```
+git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+```
+$ git branch dev
+$ git checkout dev
+```
+
+当dev分支的工作完成，我们就可以切换回master分支：
+```
+$ git checkout master
+```
+
+我们把dev分支的工作成果合并到master分支上：
+```
+$ git merge dev
+```
+
+删除dev分支:
+```
+$ git branch -d dev
+```
+
+创建并切换到新的dev分支，可以使用：
+```
+$ git switch -c dev
+```
+
+直接切换到已有的master分支，可以使用：
+```
+$ git switch master
+```
+
+```
+查看分支：git branch
+
+创建分支：git branch <name>
+
+切换分支：git checkout <name>或者git switch <name>
+
+创建+切换分支：git checkout -b <name>或者git switch -c <name>
+
+合并某分支到当前分支：git merge <name>
+
+删除分支：git branch -d <name>
+```
+## 13. 解决冲突
+**master**分支和**dev**分支各自都分别有新的提交。这种情况下，Git无法执行“快速合并”，只能试图把各自的修改合并起来，但这种合并就可能会有冲突。必须手动解决冲突后再提交。git status也可以告诉我们冲突的文件。
+```
+$ git merge dev
+Auto-merging readme.txt
+CONFLICT (content): Merge conflict in readme.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容，我们在master分支中直接用cat查看readme.txt的内容，修改后保存。
+
+再提交（手工修改之后，'git add readme.txt' 'git commit -m "confilict fixed" '，会自动将两个分支的文件合并）：
+```
+$ git add readme.txt 
+$ git commit -m "conflict fixed"
+[master cf810e4] conflict fixed
+```
+
+用带参数的git log也可以看到分支的合并情况：
+```
+$ git log --graph --pretty=oneline --abbrev-commit
+```
+
+## 14. 分支管理策略
+通常，合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。
+
+```
+git merge --no-ff -m "merge with no-ff" dev
+```
+
+在实际开发中，我们应该按照几个基本原则进行分支管理：
+
+首先，master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；
+
+那在哪干活呢？干活都在dev分支上，也就是说，dev分支是不稳定的，到某个时候，比如1.0版本发布时，再把dev分支合并到master上，在master分支发布1.0版本；你和你的小伙伴们每个人都在dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并就可以了。
+
+## 15. Bug分支
+```
+修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；
+
+当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场；
+
+在master分支上修复的bug，想要合并到当前dev分支，可以用git cherry-pick <commit>命令，把bug提交的修改“复制”到当前分支，避免重复劳动。
+```
+
+## 16. Feature分支
+开发一个新feature，最好新建一个分支；所以，每添加一个新功能，最好新建一个feature分支，在上面开发，完成后，合并，最后，删除该feature分支。
+当前在dev分支上进行开发。
+```
+$ git switch -c feature-101
+```
+开发完毕后。
+```
+$ git add vulcan.py
+$ git commit -m "add feature vulcan"
+```
+此时还没有将分支合并上去。如果想撤销分支。
+```
+$ git branch -d feature-vulcan 会提示需要确定修改
+$ git branch -D feature-vulcan 强制删除
+```
+
+## 17. 推送分支
+查看远程库的信息，用**git remote**：
+```
+$ git remote
+$ git remote -v 更详细
+```
+推送分支，就是把该分支上的所有本地提交推送到远程库。推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上：
+```
+$ git push origin dev (远程库branch name)
+```
+
+master分支是主分支，因此要时刻与远程同步；
+
+dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
+
+bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；
+
+feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。
+
+## 18. 抓取分支
+首先在一个目录下克隆：
+```
+$ git clone git@github.com:michaelliao/learngit.git
+```
+创建远程origin的dev分支到本地：
+```
+$ git checkout -b dev origin/dev
+```
+若进行推送的时候发生了冲突，先用git pull把最新的提交从origin/dev抓下来，然后，在本地合并，解决冲突，再推送：
+```
+$ git pull
+```
+git pull也失败了，原因是没有指定本地dev分支与远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接：
+```
+git branch --set-upstream-to=origin/<branch> dev
+```
+再pull, 这回git pull成功，但是合并有冲突，需要手动解决，解决的方法和分支管理中的解决冲突完全一样。解决后，提交，再push：
+
+因此，多人协作的工作模式通常是这样：
+
+1. 首先，可以试图用git push origin <branch-name>推送自己的修改；
+
+2. 如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+
+3. 如果合并有冲突，则解决冲突，并在本地提交；
+
+4. 没有冲突或者解决掉冲突后，再用git push origin <branch-name>推送就能成功！
+
+如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to <branch-name> origin/<branch-name>
+
+```
+查看远程库信息，使用git remote -v；
+
+本地新建的分支如果不推送到远程，对其他人就是不可见的；
+
+从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
+
+在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+
+建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
+
+从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
+```
+
+## 19. Rebase
+将Git的提交历史变成一条干净的直线。把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。最后，通过push操作把本地分支推送到远程。（先把刚才自己提交版本临时保存，再把版本更新到最新远程，再把临时保存的提交重新提交））
+
+## 20. 标签
+```
+命令git tag <tagname>用于新建一个标签，默认为HEAD，也可以指定一个commit id；git tag <tagname> <commit id>
+
+命令git tag -a <tagname> -m "blablabla..."可以指定标签信息；
+
+命令git tag可以查看所有标签。
+
+命令git push origin <tagname>可以推送一个本地标签；
+
+命令git push origin --tags可以推送全部未推送过的本地标签；
+
+命令git tag -d <tagname>可以删除一个本地标签；
+
+如果标签已经推送到远程，要删除远程标签就麻烦一点，先从本地删除。然后，从远程删除。删除命令也是push。
+
+命令git push origin :refs/tags/<tagname>可以删除一个远程标签。
+```
+
+## 21. 使用GitHub
+```
+在GitHub上，可以任意Fork开源仓库；
+
+自己拥有Fork后的仓库的读写权限；
+
+可以推送pull request给官方仓库来贡献代码。对方是否接受你的pull request就由官方来决定。
+```
