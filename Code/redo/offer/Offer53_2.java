@@ -22,6 +22,7 @@ public class Offer53_2 {
         }
         return left;
     }
+
     public int missingNumber2(int[] nums) {
         int res = nums.length;
         for (int i = 0; i < nums.length; i++) {

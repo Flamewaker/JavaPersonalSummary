@@ -7,6 +7,8 @@ import java.util.ArrayList;
  *
  * @Author todd
  * @Date 2020/4/14
+ *
+ * next 数组记录的就是最长相同前后缀。
  */
 public class LeetCode28 {
     public static void main(String[] args) {
