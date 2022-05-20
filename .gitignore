@@ -1,5 +1,6 @@
 ### JetBrains template
-*.idea
+/target/
+/.idea/
 *.iml
-*.*
+rebel.xml
 
