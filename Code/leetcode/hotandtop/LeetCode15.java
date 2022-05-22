@@ -1,4 +1,4 @@
-package com.todd.leetcode.hot100;
+package com.todd.leetcode.hotandtop;
 
 import java.util.ArrayList;
 import java.util.Arrays;

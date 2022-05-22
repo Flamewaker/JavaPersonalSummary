@@ -1,4 +1,4 @@
-package com.todd.leetcode.hot100;
+package com.todd.leetcode.hotandtop;
 
 /**
  * @author tongchengdong

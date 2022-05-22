@@ -1,4 +1,4 @@
-package com.todd.leetcode.hot100;
+package com.todd.leetcode.hotandtop;
 
 /**
  * @author tongchengdong
@@ -7,7 +7,7 @@ package com.todd.leetcode.hot100;
  * 贪心算法
  * 1. 水量计算公式(j - i) * Math.min(heigth[i], height[j])
  * 2. 简单做法：双指针遍历，nlogn
- * 3. 优化做法：双指针遍历，定义left和right，水的容量是由较小的那个板决定的，为了提升水的容量，因此需要提升短板的高度
+ * 3. 优化做法：双指针遍历，定义left和right，水的容量是由较小的那个板决定的，为了提升水的容量，因此需要提升短板的高度，因此每次移动短板
  * @date 11:58 PM 2022/5/20
  */
 public class LeetCode11 {

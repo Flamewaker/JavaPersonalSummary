@@ -1,8 +1,8 @@
-package com.todd.leetcode.hot100;
+package com.todd.leetcode.hotandtop;
 
 /**
  * @author tongchengdong
- * @description LeetCode31. 下一个排列
+ * @description LeetCode31. 下一个排列 (*)
  *  整体思路：
  *  1. 下一个数比当前数大：下一个排列通过后面的大数和前面的小数进行交换
  *  2. 数字增长幅度尽可能小： 在尽可能靠右的低位进行交换，需要从后向前查找。交换数字后需要对后面的数据进行升序排列, 来保证是最小的下一个排列。

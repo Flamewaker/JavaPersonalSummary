@@ -1,11 +1,11 @@
-package com.todd.leetcode.hot100;
+package com.todd.leetcode.hotandtop;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * @author tongchengdong
- * @description 3. 无重复字符的最长子串
+ * @description 3. 无重复字符的最长子串 (*)
  * 整体思路：
  * 滑动窗口 : 用start记录滑动窗口的起始坐标，指针i指向当前窗口的end，当有重复字母的时候，
  * 若重复字母索引的下一个位置比滑动窗口要大，将start指针指向
