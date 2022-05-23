@@ -24,6 +24,7 @@ public class LeetCode142 {
                 break;
             }
         }
+
         if (flag) {
             fast = head;
             while (fast != slow) {
