@@ -1,7 +1,5 @@
 package com.todd.others;
 
-import netscape.security.UserTarget;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
