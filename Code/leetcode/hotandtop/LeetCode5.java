@@ -4,8 +4,14 @@ package com.todd.leetcode.hotandtop;
  * @author tongchengdong
  * @description 5. 最长回文子串
  * 整体思路：
+ * 1. 动态规划
  * dp[i][j] = true 代指 [i,j] 所在子串为回文串
  * dp[i][j] = dp[i + 1][j - 1] == true && s[i] == s[j]
+ * 时间复杂度 O(n2)
+ * 2. 方法2.中心扩散法
+ * 思路：分最长回文子串是奇数和偶数的情况，定义start为最长回文子串开始的索引，然后循环字符串，不断不断向外扩展回文字符串的长度，
+ * 循环的过程中更新最大回文子串的长度和start的位置，最后返回start到start+ maxLength的子串就是本题的答案
+ * 时间复杂度 O(n2)
  * @date 11:40 PM 2022/5/20
  */
 public class LeetCode5 {
@@ -40,42 +46,64 @@ public class LeetCode5 {
         return s.substring(maxStart, maxEnd + 1);
     }
 
-    public String longestPalindrome2(String s) {
-        if (s == null || s.length() == 0) {
-            return "";
+    public String longestPalindromeOptimized(String s) {
+        if (s == null || s.length() <= 1) {
+            return s;
         }
-        //保存起始位置，测试了用数组似乎能比全局变量稍快一点
-        int[] range = new int[2];
-        char[] str = s.toCharArray();
-        for (int i = 0; i < s.length(); i++) {
-            //把回文看成中间的部分全是同一字符，左右部分相对称
-            //找到下一个与当前字符不同的字符
-            i = findLongest(str, i, range);
+        int n = s.length();
+        int left = 0;
+        int right = 0;
+        int maxLen = 1;
+        boolean[][] dp = new boolean[n][n];
+        for (int i = 0; i < n; i++) {
+            dp[i][i] = true;
         }
-        return s.substring(range[0], range[1] + 1);
+        for (int k = 1; k < n; k++) {
+            for (int i = 0; i < n - k; i++) {
+                if (s.charAt(i) == s.charAt(i + k) && (k <= 1 || dp[i + 1][i + k - 1])) {
+                    dp[i][i + k] = true;
+                    if (k + 1 > maxLen) {
+                        left = i;
+                        right = i + k;
+                        maxLen = k + 1;
+                    }
+                }
+            }
+        }
+        return s.substring(left, right + 1);
     }
 
-    public static int findLongest(char[] str, int low, int[] range) {
-        //查找中间部分
-        int high = low;
-        while (high < str.length - 1 && str[high + 1] == str[low]) {
-            high++;
+    public String longestPalindromeCenterSpread(String s) {
+        if (s == null || s.length() < 2) {
+            return s;
         }
-        //定位中间部分的最后一个字符
-        int ans = high;
-        //从中间向左右扩散
-        while (low > 0 && high < str.length - 1 && str[low - 1] == str[high + 1]) {
-            low--;
-            high++;
+        int maxLen = 0;
+        // 数组第一位记录起始位置，第二位记录长度
+        int[] res = new int[2];
+        for (int i = 0; i < s.length() - 1; i++) {
+            int[] odd = centerSpread(s, i, i);
+            int[] even = centerSpread(s, i, i + 1);
+            int[] max = odd[1] > even[1] ? odd : even;
+            if (max[1] > maxLen) {
+                res = max;
+                maxLen = max[1];
+            }
         }
-        //记录最大长度
-        if (high - low > range[1] - range[0]) {
-            range[0] = low;
-            range[1] = high;
-        }
-        return ans;
+        return s.substring(res[0], res[0] + res[1]);
     }
 
+    private int[] centerSpread(String s, int left, int right) {
+        int len = s.length();
+        while (left >= 0 && right < len) {
+            if (s.charAt(left) == s.charAt(right)) {
+                left--;
+                right++;
+            } else {
+                break;
+            }
+        }
+        return new int[]{left + 1, right - left - 1};
+    }
 
     /**
      * 把原来的字符串倒置了，找最长的公共子串就可以了

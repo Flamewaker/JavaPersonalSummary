@@ -1,7 +1,5 @@
 package com.todd.exam;
 
-import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
-
 import java.util.Scanner;
 
 /**

@@ -1,7 +1,5 @@
 package com.todd.leetcode.hotandtop;
 
-import com.todd.code.BinaryTree;
-
 /**
  * @author tongchengdong
  * @description 105. 从前序与中序遍历序列构造二叉树

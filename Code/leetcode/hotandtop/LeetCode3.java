@@ -35,4 +35,22 @@ public class LeetCode3 {
         }
         return ans;
     }
+
+    public int lengthOfLongestSubstringSimplified(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        int n = s.length();
+        int ans = 0;
+        Map<Character, Integer> map = new HashMap<>();
+        for (int left = 0, right = 0; right < n; right++) {
+            if (map.containsKey(s.charAt(right))) {
+                int lastIndex = map.get(s.charAt(right));
+                left = Math.max(lastIndex + 1, left);
+            }
+            map.put(s.charAt(right), right);
+            ans = Math.max(ans, right - left + 1);
+        }
+        return ans;
+    }
 }

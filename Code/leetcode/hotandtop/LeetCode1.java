@@ -12,23 +12,21 @@ public class LeetCode1 {
 
     /**
      * 给定一个未排序的数组，找到两个数使得它们相加之和等于目标数。
-     * 构建索引map，判断 target - nums[i] 是否在数组中，注意要剔除索引为自己的情况
+     * 构建索引map，判断 target - nums[i] 是否在数组中
      */
     public int[] twoSum(int[] nums, int target) {
-        if (nums == null) {
-            return null;
+        if (nums.length == 0) {
+            return new int[0];
         }
-        Map<Integer, Integer> index = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            index.put(nums[i], i);
-        }
-        for (int i = 0; i < nums.length; i++) {
-            int another = target - nums[i];
-            if (index.containsKey(another) && index.get(another) != i) {
-                return new int[]{i, index.get(another)};
+            int cur = nums[i];
+            if (map.containsKey(target - cur)) {
+                return new int[]{map.get(target - cur), i};
             }
+            map.put(cur, i);
         }
-        return new int[2];
+        return new int[0];
     }
 
     /**
