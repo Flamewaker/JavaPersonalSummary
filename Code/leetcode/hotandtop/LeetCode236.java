@@ -33,6 +33,7 @@ public class LeetCode236 {
         TreeNode left;
         TreeNode right;
         TreeNode(int x) { val = x; }
+
     }
 
 }

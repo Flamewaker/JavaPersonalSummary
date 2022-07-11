@@ -1,7 +1,5 @@
 package com.todd.leetcode.hotandtop;
 
-import com.todd.redo.top100.ListNode;
-
 /**
  * @author tongchengdong
  * @description 141. 环形链表

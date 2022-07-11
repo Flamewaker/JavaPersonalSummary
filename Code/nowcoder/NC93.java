@@ -1,7 +1,5 @@
 package com.todd.nowcoder;
 
-import javafx.scene.chart.ValueAxis;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -30,83 +28,83 @@ public class NC93 {
         }
         return ans.stream().mapToInt(Integer::valueOf).toArray();
     }
-}
 
-class LRU {
+    class LRU {
 
-    class Node {
+        class Node {
 
-        int key;
-        int value;
-        Node next;
-        Node pre;
+            int key;
+            int value;
+            Node next;
+            Node pre;
 
-        public Node(int key, int value) {
-            this.key = key;
-            this.value = value;
+            public Node(int key, int value) {
+                this.key = key;
+                this.value = value;
+            }
+
         }
 
-    }
+        private HashMap<Integer, Node> map;
+        private Node head;
+        private Node tail;
 
-    private HashMap<Integer, Node> map;
-    private Node head;
-    private Node tail;
-
-    public LRU() {
-        map = new HashMap<>();
-    }
-
-
-    public void set(int key, int value) {
-        Node node = map.get(key);
-        if (node == null) {
-            node = new Node(key, value);
-            appendHead(node);
-            map.put(key, node);
-        } else {
-            node.value = value;
-            removeNode(node);
-            appendHead(node);
+        public LRU() {
+            map = new HashMap<>();
         }
-    }
 
-    public int get(int key) {
-        Node node = map.get(key);
-        if (node == null) {
-            return -1;
-        } else {
-            int val = node.value;
-            removeNode(node);
-            appendHead(node);
-            return val;
+
+        public void set(int key, int value) {
+            Node node = map.get(key);
+            if (node == null) {
+                node = new Node(key, value);
+                appendHead(node);
+                map.put(key, node);
+            } else {
+                node.value = value;
+                removeNode(node);
+                appendHead(node);
+            }
         }
-    }
 
-    public void appendHead (Node node) {
-        if (head == null && tail == null) {
-            head = node;
-            tail = node;
-        } else {
-            node.next = head;
-            head.pre = node;
-            head = node;
+        public int get(int key) {
+            Node node = map.get(key);
+            if (node == null) {
+                return -1;
+            } else {
+                int val = node.value;
+                removeNode(node);
+                appendHead(node);
+                return val;
+            }
         }
-    }
 
-    public void removeNode (Node node) {
-        if (head == tail) {
-            head = tail = null;
-        } else if (head == node) {
-            head = head.next;
-            head.pre = null;
-        } else if (tail == node) {
-            tail = tail.pre;
-            tail.next = null;
-        } else {
-            node.pre.next = node.next;
-            node.next.pre = node.pre;
-            node.next = null;
-            node.pre = null;
+        public void appendHead (Node node) {
+            if (head == null && tail == null) {
+                head = node;
+                tail = node;
+            } else {
+                node.next = head;
+                head.pre = node;
+                head = node;
+            }
+        }
+
+        public void removeNode (Node node) {
+            if (head == tail) {
+                head = tail = null;
+            } else if (head == node) {
+                head = head.next;
+                head.pre = null;
+            } else if (tail == node) {
+                tail = tail.pre;
+                tail.next = null;
+            } else {
+                node.pre.next = node.next;
+                node.next.pre = node.pre;
+                node.next = null;
+                node.pre = null;
+            }
         }
     }
 }
