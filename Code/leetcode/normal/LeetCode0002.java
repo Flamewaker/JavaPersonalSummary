@@ -8,7 +8,7 @@ package com.todd.leetcode.normal;
  * @Author todd
  * @Date 2020/5/15
  */
-public class LeetCode2 {
+public class LeetCode0002 {
     class ListNode {
         int val;
         ListNode next;

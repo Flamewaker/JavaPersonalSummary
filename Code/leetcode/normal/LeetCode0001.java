@@ -9,7 +9,7 @@ import java.util.Map;
  * @Author todd
  * @Date 2020/4/13
  */
-public class LeetCode1 {
+public class LeetCode0001 {
 
     //给定一个未排序的数组，找到两个数使得它们相加之和等于目标数。
 

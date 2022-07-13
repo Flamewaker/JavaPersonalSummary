@@ -1,6 +1,5 @@
 package com.todd.leetcode.normal;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -11,7 +10,7 @@ import java.util.PriorityQueue;
  * 时间复杂度：考虑优先队列中的元素不超过 k 个，那么插入和删除的时间代价为 O(logk)，这里最多有 kn 个点，对于每个点都被插入删除各一次，故总的时间代价即渐进时间复杂度为 O(kn×logk)。
  * 空间复杂度：这里用了优先队列，优先队列中的元素不超过 k 个，故渐进空间复杂度为 O(k)。
  */
-public class LeetCode23 {
+public class LeetCode0023 {
     class ListNode {
         int val;
         ListNode next;

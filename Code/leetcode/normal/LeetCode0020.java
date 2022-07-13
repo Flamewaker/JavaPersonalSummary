@@ -8,7 +8,7 @@ import java.util.Stack;
  * @Author todd
  * @Date 2020/5/15
  */
-public class LeetCode20 {
+public class LeetCode0020 {
     public boolean isValid(String s) {
         Stack<Character> st = new Stack();
         int len = s.length();

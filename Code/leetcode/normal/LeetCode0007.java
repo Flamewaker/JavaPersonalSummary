@@ -5,7 +5,7 @@ package com.todd.leetcode.normal;
  * @date 2020/8/15 8:45
  * @description: TODO
  */
-public class LeetCode7 {
+public class LeetCode0007 {
     public class TreeNode {
         int val;
         TreeNode left;

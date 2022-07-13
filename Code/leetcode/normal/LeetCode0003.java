@@ -6,7 +6,7 @@ package com.todd.leetcode.normal;
  * @Author todd
  * @Date 2020/4/13
  */
-public class LeetCode3 {
+public class LeetCode0003 {
     public int lengthOfLongestSubstring(String s) {
         int len = s.length();
         if (len == 0) {

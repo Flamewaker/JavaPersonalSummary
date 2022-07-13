@@ -9,7 +9,7 @@ import java.util.Map;
  * @description: 最长公共前缀
  * 这题感觉最好的方式是使用前缀树。
  */
-public class LeetCode14 {
+public class LeetCode0014 {
     public String longestCommonPrefix(String[] strs) {
         if (strs.length == 0) {
             return "";

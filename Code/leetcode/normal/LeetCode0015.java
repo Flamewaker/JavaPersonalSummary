@@ -21,7 +21,7 @@ import java.util.List;
  *      若和小于 0，说明 nums[L] 太小，L 右移
  *
  */
-public class LeetCode15 {
+public class LeetCode0015 {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         int len = nums.length;

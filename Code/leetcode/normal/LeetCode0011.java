@@ -13,7 +13,7 @@ package com.todd.leetcode.normal;
  * @Author todd
  * @Date 2020/4/18
  */
-public class LeetCode11 {
+public class LeetCode0011 {
     public int maxArea(int[] height) {
         if (height.length < 2) {
             return 0;

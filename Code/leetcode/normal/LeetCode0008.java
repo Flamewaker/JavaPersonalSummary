@@ -16,7 +16,7 @@ package com.todd.leetcode.normal;
  * @Author todd
  * @Date 2020/4/4
  */
-public class LeetCode8 {
+public class LeetCode0008 {
     public int myAtoi(String str) {
         char[] chars = str.toCharArray();
         int length = str.length();

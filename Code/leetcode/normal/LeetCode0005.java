@@ -6,7 +6,7 @@ package com.todd.leetcode.normal;
  * @Author todd
  * @Date 2020/5/15
  */
-public class LeetCode5 {
+public class LeetCode0005 {
     
     public String longestPalindrome(String s) {
         if (s == null || s.length() < 2) {

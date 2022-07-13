@@ -6,7 +6,7 @@ package com.todd.leetcode.normal;
  * @author todd
  * @Date 2020/4/15
  */
-public class LeetCode21 {
+public class LeetCode0021 {
     public class ListNode {
         int val;
         ListNode next;

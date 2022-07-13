@@ -17,7 +17,7 @@ package com.todd.leetcode.normal;
  *          or dp[i][j] = dp[i][j-2] // in this case, a* counts as empty
  *
  */
-public class LeetCode10 {
+public class LeetCode0010 {
 
     public boolean isMatch(String s, String p) {
         if (s == null || p == null) {

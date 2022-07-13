@@ -28,7 +28,7 @@ package com.todd.leetcode.normal;
  * @Author todd
  * @Date 2020/5/15
  */
-public class LeetCode4 {
+public class LeetCode0004 {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int n = nums1.length + nums2.length;
         int mid1 = 0, mid2 = 0;
